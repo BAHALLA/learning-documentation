@@ -1,0 +1,7 @@
+site_name: Bahalla's Learning Journey
+site_url: https://bahalla.com/docs
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Kafka: kafka.md
