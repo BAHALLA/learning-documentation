@@ -5,7 +5,7 @@ It provides a powerful, declarative API so you can describe the desired state of
 
 ---
 
-## 🌐 Overview
+## Overview
 
 * **Container Orchestration** – schedules and runs containers across a cluster of machines.
 * **Declarative Configuration** – you describe the desired state (e.g., “3 replicas”) and Kubernetes continuously works to match it.
@@ -14,7 +14,7 @@ It provides a powerful, declarative API so you can describe the desired state of
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The diagram below shows the main components of a Kubernetes cluster:
 
@@ -22,24 +22,26 @@ The diagram below shows the main components of a Kubernetes cluster:
 
 **Key Pieces**
 
-* **Control Plane**
-  * **API Server** – central management entrypoint.
-  * **Scheduler** – decides which node runs a new pod.
-  * **Controller Manager** – ensures desired state (replicas, endpoints, etc.).
-  * **etcd** – distributed key-value store for cluster state.
+### Control Plane
+The control plane manages the entire cluster and keeps the system’s desired state.
 
-* **Worker Nodes**
-  * **Kubelet** – agent that runs on each node and communicates with the API server.
-  * **Kube-Proxy** – manages networking rules and service discovery.
-  * **Container Runtime** – e.g., containerd or CRI-O to run the actual containers.
+| Component            | Role |
+|----------------------|-------------------------------------------------------------|
+| **API Server**       | Central management entrypoint; validates and processes requests. |
+| **Scheduler**        | Chooses which node should run a new pod. |
+| **Controller Manager**| Ensures the cluster matches the declared state (replicas, endpoints, etc.). |
+| **etcd**             | Highly available key–value store holding cluster configuration and state. |
 
 ---
 
-## 🚀 Next Steps
+### Worker Nodes
+Worker nodes run your actual workloads (containers/pods).
 
-* Try the [Kubernetes Basics Tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics/).
-* Explore `kubectl` commands:
-  ```bash
-  kubectl get nodes
-  kubectl apply -f deployment.yaml
+| Component            | Role |
+|----------------------|-------------------------------------------------------------|
+| **Kubelet**          | Agent on each node that talks to the API server and manages pods. |
+| **Kube-Proxy**       | Maintains networking rules and handles service discovery/load-balancing. |
+| **Container Runtime**| Software (e.g., containerd, CRI-O) that runs the containers. |
+
+
 
