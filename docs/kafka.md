@@ -10,7 +10,8 @@ This page is dedicated to questions and answers about Apache Kafka.
 
 ### How does Kafka guarantee message order?
 
-*Answer goes here*
+> Kafka guarantees message order within a topic's partition. For example, if messages `M1` and `M2` are sent to the same partition `P0`, a consumer `C1` is guaranteed to read `M1` before `M2`.
+
 
 ### What is the difference between a topic and a partition?
 
