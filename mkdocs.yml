@@ -5,6 +5,7 @@ theme:
 nav:
   - Home: index.md
   - Kafka Q&A: kafka.md
+  - Kubernetes Q&A: kubernetes.md
 
 markdown_extensions:
   - admonition           # <– needed for !!! info/warning/success
