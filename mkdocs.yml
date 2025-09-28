@@ -5,3 +5,9 @@ theme:
 nav:
   - Home: index.md
   - Kafka: kafka.md
+
+markdown_extensions:
+  - admonition           # <– needed for !!! info/warning/success
+  - pymdownx.details     # collapsible details
+  - pymdownx.superfences # fenced blocks inside admonitions
+  - pymdownx.emoji       # if you want the emoji icons to look nicer
