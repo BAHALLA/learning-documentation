@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://bahalla.github.io/learning-documentation/</loc>
+         <lastmod>2025-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://bahalla.github.io/learning-documentation/kafka/</loc>
+         <lastmod>2025-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://bahalla.github.io/learning-documentation/kubernetes/</loc>
+         <lastmod>2025-09-28</lastmod>
+    </url>
+</urlset>
