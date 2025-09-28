@@ -4,7 +4,7 @@
 
 ---
 
-## 🐘 ZooKeeper’s Role (Legacy)
+## ZooKeeper’s Role (Legacy)
 
 !!! info "Overview"
     ZooKeeper was traditionally used to manage the **state of a Kafka cluster**, including:
@@ -18,7 +18,7 @@
 
 ---
 
-## ⚡ KRaft Mode
+## KRaft Mode
 
 !!! success "Definition"
     **KRaft (Kafka Raft)** is Kafka’s built-in consensus protocol that lets Kafka manage its **own metadata** without ZooKeeper.
@@ -30,7 +30,7 @@
 
 ---
 
-## 📨 Message Ordering
+## Message Ordering
 
 !!! quote "Guarantee"
     Kafka **guarantees message order only within a single partition**.
@@ -41,10 +41,4 @@ a consumer `C1` will always read **`M1` before `M2`**.
 !!! warning "Important"
     Kafka **does not guarantee order across different partitions**.
 
----
 
-## 📚 Quick Tips
-
-* Use **partitions wisely**: more partitions = higher throughput but no global ordering.
-* Prefer **KRaft mode** for new clusters—simpler deployment and easier scaling.
-* Monitor **Controller nodes** closely; they are the “brain” of the cluster.
