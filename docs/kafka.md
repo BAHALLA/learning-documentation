@@ -1,21 +1,50 @@
 # Apache Kafka
 
-This page is dedicated to questions and answers about Apache Kafka.
+> **Apache Kafka** is a distributed event-streaming platform used for high-performance data pipelines, streaming analytics, and event-driven applications.
 
-## Questions
+---
 
-### What is the role of ZooKeeper in Kafka?
+## 🐘 ZooKeeper’s Role (Legacy)
 
-> ZooKeeper was traditionally used to manage the state of a Kafka cluster, including cluster membership and leader elections. However, since Kafka version 4.x, ZooKeeper is no longer required and has been replaced by KRaft mode.
+!!! info "Overview"
+    ZooKeeper was traditionally used to manage the **state of a Kafka cluster**, including:
+    
+    * Cluster membership  
+    * Leader elections  
 
-### What is KRaft mode?
+!!! warning "Since Kafka 4.x"
+    Kafka **no longer requires ZooKeeper**.  
+    The **KRaft (Kafka Raft)** mode fully replaces it.
 
-> KRaft (Kafka Raft) is the consensus protocol that allows you to run Kafka without ZooKeeper. This new mode, referred to as "KRaft mode", simplifies Kafka's architecture by having Kafka manage its own metadata internally.
-> 
-> In a KRaft-based cluster, there are two types of nodes:
-> * **Controllers**: These nodes are responsible for managing the cluster's metadata, including leadership, membership, and configurations.
-> * **Brokers**: These are the usual cluster nodes that handle client traffic and data storage.
+---
 
-### How does Kafka guarantee message order?
+## ⚡ KRaft Mode
 
-> Kafka guarantees message order only within a single partition of a topic. If messages `M1` and `M2` are sent to the same partition `P0`, a consumer `C1` is guaranteed to read `M1` before `M2`. However, Kafka does not guarantee order across different partitions.
+!!! success "Definition"
+    **KRaft (Kafka Raft)** is Kafka’s built-in consensus protocol that lets Kafka manage its **own metadata** without ZooKeeper.
+
+| Node Type      | Responsibilities                                   |
+|-----------------|----------------------------------------------------|
+| **Controller** | Maintains cluster metadata, leader election, configs |
+| **Broker**     | Handles client traffic and persists topic data       |
+
+---
+
+## 📨 Message Ordering
+
+!!! quote "Guarantee"
+    Kafka **guarantees message order only within a single partition**.
+
+For example, if messages `M1` and `M2` are sent to **partition `P0`**,  
+a consumer `C1` will always read **`M1` before `M2`**.
+
+!!! warning "Important"
+    Kafka **does not guarantee order across different partitions**.
+
+---
+
+## 📚 Quick Tips
+
+* Use **partitions wisely**: more partitions = higher throughput but no global ordering.
+* Prefer **KRaft mode** for new clusters—simpler deployment and easier scaling.
+* Monitor **Controller nodes** closely; they are the “brain” of the cluster.
