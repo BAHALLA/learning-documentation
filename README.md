@@ -4,7 +4,7 @@ Welcome to Bahalla! This repository contains my personal learning notes and docu
 
 ## 📚 Documentation
 
-You can browse the full documentation at [https://bahalla.github.io/learning-documentation/](https://bahalla.github.io/learning-documentation/).
+You can browse the full documentation at [learning-documentation](https://bahalla.github.io/learning-documentation/).
 
 ## 🚀 Getting Started
 
