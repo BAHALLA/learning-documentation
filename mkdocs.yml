@@ -1,5 +1,5 @@
 site_name: Bahalla's Learning Journey
-site_url: https://bahalla.com/docs
+site_url: https://bahalla.github.io/learning-documentation/
 theme:
   name: material
 nav:
