@@ -4,7 +4,7 @@
 
 ---
 
-## ZooKeeper’s Role (Legacy)
+## What isZooKeeper’s Role in Kafka ? 
 
 !!! info "Overview"
     ZooKeeper was traditionally used to manage the **state of a Kafka cluster**, including:
@@ -18,7 +18,7 @@
 
 ---
 
-## KRaft Mode
+## What is kafka KRaft Mode ?
 
 !!! success "Definition"
     **KRaft (Kafka Raft)** is Kafka’s built-in consensus protocol that lets Kafka manage its **own metadata** without ZooKeeper.
@@ -30,7 +30,7 @@
 
 ---
 
-## Message Ordering
+## How kafka guarantees message ordering ?
 
 !!! quote "Guarantee"
     Kafka **guarantees message order only within a single partition**.

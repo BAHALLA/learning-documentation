@@ -4,7 +4,7 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - Kafka: kafka.md
+  - Kafka Q&A: kafka.md
 
 markdown_extensions:
   - admonition           # <– needed for !!! info/warning/success
