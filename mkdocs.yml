@@ -2,6 +2,8 @@ site_name: Bahalla's Learning Journey
 site_url: https://bahalla.github.io/learning-documentation/
 theme:
   name: material
+  logo: images/logo.png
+  favicon: images/logo.png
 nav:
   - Home: index.md
   - Kafka: kafka.md
